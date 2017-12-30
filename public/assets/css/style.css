@@ -1,0 +1,29 @@
+.main {
+width: 60%;
+margin: 0 auto;
+margin-top: 125px;
+background-color: lightblue;
+text-align: center;
+}
+
+.main h2 {
+	font-size: 50px;
+	margin-bottom: 20px   ;
+}
+
+#content {
+
+margin-top: 25px;
+border-top: 1px lightgray solid;
+}
+
+#content p {
+	font-size: 30px;
+	font-weight: bold;
+
+}
+
+#survey-button {
+	margin-top: 10px;
+	font-size: 25px;
+}
