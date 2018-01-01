@@ -5,9 +5,10 @@ var bodyParser = require("body-parser");
 var path = require("path");
 var exphbs = require("express-handlebars");
 var serveStatic = require('serve-static')
+var clear = require('clear');
 
-
-
+// clear console
+clear();
 
 // Sets up Express App
 // =====================================
@@ -27,24 +28,12 @@ app.set("view engine", "handlebars");
 //app.use(serveStatic(path.join(__dirname, 'public')));
 app.use('/', express.static(path.join(__dirname + '/public')));
 
-//  Data Objects here (Data)
-// =======================================
-
-
-
 
 // Routes
 // =======================================
+require('./routing/api-routes.js')(app); 
+require('./routing/html-routes.js')(app);
 
-
-// Basic Route 
-app.get("/", function(req, res ) {
-	res.sendFile(path.join(__dirname, "./public/home.html"));
-});
-
-app.get("/survey", function(req, res) {
-	res.sendFile(path.join(__dirname, "./public/survey.html"));
-});
 
 
 // Starts the server to begin listening

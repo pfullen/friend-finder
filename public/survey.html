@@ -2,7 +2,9 @@
 <html lang="en">
 	<head>
 		<title>Friend Finder</title>
-
+<!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
  <!-- css reset-->
     <link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     
@@ -12,7 +14,8 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
    <!-- custom css-->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-
+	<script src="https://code.jquery.com/jquery.js"></script>
+ 	
 
 	</head>
 <body>
@@ -24,119 +27,134 @@
 					<h1 class="panel-title">
 						Survey  Questions 
 					</h1>
-					<p>  1 (Strongly Diagree) .. 5 (Strongly Agree) </p>
+					
 				</div>
 				<div class="panel-body" id= "questions">
-					<div class="radio">
-						<h3> Test question 1?  </h3>
-						
-					  <label><input type="radio" name="question1">Option 1</label>
+					<div class="form-group">
+  					<label for="usr">Name:</label>
+  					<input type="text" class="form-control" id="usr">
 					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question1">Option 2</label>
+				<!--		Select a file: <input type="file" name="img">  -->
+				<div class="form-group">
+  					<label for="pic">Profile Pic:</label>
+  					<input type="file" class="form-control" id="pic">
 					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question1" disabled>Option 3</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question1">Option 4</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question1" disabled>Option 5</label>
-					</div>
-					<!--  End of first Question  --> 
 
-					<div class="radio">
-						<h3> Test question 2?  </h3>
-						
-					  <label><input type="radio" name="question2">Option 1</label>
+					<div class="form-group">
+					  <label for="question1">Question # 1?</label>
+					  <select class="form-control" id="question1">
+					   <option type ="number" value = "1">1(Strongly Disagree)</option>
+					    <option>2</option>
+					    <option>3</option>
+					    <option>4</option>
+					 	<option value = "5">5(Strongly Agree) </option>
+					  </select>
 					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question2">Option 2</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question2" disabled>Option 3</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question2">Option 4</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question2" disabled>Option 5</label>
-					</div>
-					<!-- End of 2nd Question -->
-							<div class="radio">
-						<h3> Test question 3?  </h3>
-						
-					  <label><input type="radio" name="question3">Option 1</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question3">Option 2</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question3" disabled>Option 3</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question3">Option 4</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question3" disabled>Option 5</label>
-					</div>
-					<!-- End of 3rd Question -->
-						<div class="radio">
-						<h3> Test question 4?  </h3>
-						
-					  <label><input type="radio" name="question4">Option 1</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question4">Option 2</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question4" disabled>Option 3</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question4">Option 4</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question4" disabled>Option 5</label>
-					</div>
-					<!-- End of 4th Question -->
-						<div class="radio">
-						<h3> Test question 5?  </h3>
-						
-					  <label><input type="radio" name="question5">Option 1</label3
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question5">Option 2</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question5" disabled>Option 3</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question5">Option 4</label>
-					</div>
-					<div class="radio">
-					  <label><input type="radio" name="question5" disabled>Option 5</label>
-					</div>
-					<!-- End of 5th Question -->
-						
-				</div>
 
+					<div class="form-group">
+					  <label for="question2">Question # 2?</label>
+					  <select class="form-control" id="question2">
+					    <option value = "1">1(Strongly Disagree)</option>
+					    <option>2</option>
+					    <option>3</option>
+					    <option>4</option>
+					 	<option value = "5">5(Strongly Agree) </option>
+					  </select>
+					</div>
+					<div class="form-group">
+					  <label for="question3">Question # 3?</label>
+					  <select class="form-control" id="question3">
+					    <option value = "1">1(Strongly Disagree)</option>
+					    <option>2</option>
+					    <option>3</option>
+					    <option>4</option>
+					 	<option value = "5">5(Strongly Agree) </option>
+					  </select>
+					</div>
+
+					<div class="form-group">
+					  <label for="question4">Question # 4?</label>
+					  <select class="form-control" id="question4">
+					    <option value = "1">1(Strongly Disagree)</option>
+					    <option>2</option>
+					    <option>3</option>
+					    <option>4</option>
+					 	<option value = "5">5(Strongly Agree) </option>
+					  </select>
+					</div>
+					<div class="form-group">
+					  <label for="question5">Question # 5?</label>
+					  <select class="form-control" id="question5">
+					    <option value = "1">1(Strongly Disagree)</option>
+					    <option>2</option>
+					    <option>3</option>
+					    <option>4</option>
+					 	<option value = "5">5(Strongly Agree) </option>
+					  </select>
+					</div>
+
+					<div class="form-group">
+					  <label for="question6">Question # 6?</label>
+					  <select class="form-control" id="question6">
+					    <option value = "1">1(Strongly Disagree)</option>
+					    <option>2</option>
+					    <option>3</option>
+					    <option>4</option>
+					 	<option value = "5">5(Strongly Agree) </option>
+					  </select>
+					</div><div class="form-group">
+					  <label for="question7">Question # 7?</label>
+					  <select class="form-control" id="question7">
+					    <option value = "1">1(Strongly Disagree)</option>
+					    <option>2</option>
+					    <option>3</option>
+					    <option>4</option>
+					 	<option value = "5">5(Strongly Agree) </option>
+					  </select>
+					</div>
+
+					<div class="form-group">
+					  <label for="question8">Question # 8?</label>
+					  <select class="form-control" id="question8">
+					   <option value = "1" >1(Strongly Disagree)</option>
+					   <option value = "2">2</option>
+					   <option value = "3">3</option>
+					   <option value = "4">4</option>
+					   <option value = "5">5(Strongly Agree) </option>
+					  </select>
+					</div>
+					<div class="form-group">
+					  <label for="question9">Question # 9?</label>
+					  <select class="form-control" id="question9">
+					    <option value = "1">1(Strongly Disagree)</option>
+					    <option>2</option>
+					    <option>3</option>
+					    <option>4</option>
+					 	<option value = "5">5(Strongly Agree) </option>
+					  </select>
+					</div>
+
+					<div class="form-group">
+					  <label for="question10">Question # 10?</label>
+					  <select class="form-control" id="question10">
+					  <option value = "1">1(Strongly Disagree)</option>
+					    <option>2</option>
+					    <option>3</option>
+					    <option>4</option>
+					 	<option value = "5">5(Strongly Agree) </option>
+					  </select>
+					</div>
 		</div>
 		<button type="submit" class="btn btn-primary btn-lg btn-block" id="survey-submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
    						Submit </button>
 			</div>
 	</div>
 </div>
+</div>
 
 
+<script type="text/javascript" src="assets/js/index.js"></script>
 
-
-
-
-
-
-	
-	
 
 </body>
 </html>

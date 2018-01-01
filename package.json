@@ -1,0 +1,31 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "App to find compatible friends",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pfullen/friend-finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pfullen/friend-finder/issues"
+  },
+  "homepage": "https://github.com/pfullen/friend-finder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "clear": "0.0.1",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "path": "^0.12.7",
+    "serve-static": "^1.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.7"
+  }
+}
