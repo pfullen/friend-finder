@@ -1,37 +1,23 @@
-$( document).ready(function() {
+$(document).ready(function() {
+    $("#survey-submit").on("click", function(event) {
+        event.preventDefault();
 
-   $("#survey-submit").on("click", function(event) {
-   
-     event.preventDefault();
+        var name = $("#usr").val();
+        var photo = $("#photo").val();
+        var scores = ["2", "4", "5", "7", "8", "39"];
+        var newSurvey = {
+        name: $("#usr").val(),
+        photo: $("#photo").val(),
+        //scores: 
+      // [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+        };
 
 
-      
-
-    var name =  $("#usr").val();  
-    var pic =   $("#pic").val();
-    var scores = [
-        parseInt($("#question1").val()),
-        parseInt($("#question2").val()),
-        parseInt($("#question3").val()),
-        parseInt($("#question4").val()),
-        parseInt($("#question5").val()),
-        parseInt($("#question6").val()),
-        parseInt($("#question7").val()),
-        parseInt($("#question8").val()),
-        parseInt($("#question9").val()),
-        parseInt($("#question10").val())
-    ];
-
-    var newSurvey = {
-      name: name,
-      profilePic : pic,
-      scores: scores 
-      };
-
-       // Question: What does this code do??
-      $.post("/api/friends", newSurvey)
-       .done(function(data) {
-        console.log(data);
-    });
+        newSurvey.scores = scores;
+        // Question: What does this code do??
+        $.post("/api/friends", newSurvey)
+            .done(function(data) {
+                console.log(data);
+            });
     });
 });

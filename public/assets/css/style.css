@@ -73,3 +73,31 @@ text-align: center;
 	margin-bottom: 25px;
 }
 
+.box {
+	display: inline;
+	border: 1px solid black;
+	width: 20%;
+}
+
+.box p {
+	width: 20%;
+}
+
+.caption {
+	text-align: center;
+	font-size: 25px;
+}
+
+.thumbnail {
+	padding-top: 35px;
+	background-color: lightgray;
+}
+
+.thumbnail img {
+	height: 150px;
+
+}
+
+#title {
+	text-align: center;
+}
