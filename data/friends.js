@@ -9,7 +9,8 @@ var friendsArray =[
     gender: 'male',
     photo: 'https://randomuser.me/api/portraits/thumb/men/39.jpg',
     scores: [ 4, 4, 1, 5, 4, 3, 1, 2, 4, 2 ] },
-  { name: 'lou',
+  {
+   name: 'lou',
     gender: 'female',
     photo: 'https://randomuser.me/api/portraits/thumb/women/49.jpg',
     scores: [ 4, 4, 5, 4, 4, 3, 2, 1, 5, 3 ] },

@@ -6,7 +6,7 @@ var randomUser = require('random-user');
 var file = '../data/data.json';
 var jsonfile = require('jsonfile');
 //  Routing 
-
+var friendsByGender = [];
 
 function getUsers(num) {
     // Get n number of users 
@@ -14,37 +14,27 @@ function getUsers(num) {
     for (i = 0; i < 50; i++) {
         randomUser()
             .then((data) => {
+                var name = data.name.first;
+                var gender = data.gender;
+                var photo = data.picture.thumbnail;
+                var scores = [];
 
-                    //names.forEach(function(name){
-
-
-                    var name = data.name.first;
-                    var gender = data.gender;
-                    var photo = data.picture.thumbnail;
-                    var scores = [];
-
-                    for (i=0; i<10 ; i++) {
-                    	var rndNum = Math.floor((Math.random() * 5) + 1);
-                    	scores.push(rndNum);
-                    }
-
-
-                    var user = {
-                        "name": name,
-                        "gender": gender,
-                        "photo": photo,
-                        "scores": scores
-                    }
-                    users.push(user);
-                   
-                    console.log(users);
-                   
+                for (i = 0; i < 10; i++) {
+                    var rndNum = Math.floor((Math.random() * 5) + 1);
+                    scores.push(rndNum);
                 }
+                var user = {
+                    "name": name,
+                    "gender": gender,
+                    "photo": photo,
+                    "scores": scores
+                }
+                users.push(user);
 
-            )
+                console.log(users);
+            })
             .catch((err) => console.log(err));
     }
-    
 }
 
 
@@ -57,11 +47,35 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/survey.html"));
     });
     app.get("/friends", function(req, res) {
-        //friends.forEach(function(friend) {
-        //getUsers(20);
-        //onsole.log(users);
-        console.log(friends)
-            res.render("friends", {friends})
-            //})
+
+
+        res.render("friends", {
+            friends
+        })
     });
+    app.get("/female-friends", function(req, res) {
+        var femaleFriends = [];
+        friends.forEach(function(friend) {
+      		         	
+
+             if (friend.gender === "female") {
+                femaleFriends.push(friend)
+            } 
+        })
+        res.render("friends", {friends: femaleFriends});
+           
+    });
+    app.get("/male-friends", function(req, res) {
+        var maleFriends = [];
+        friends.forEach(function(friend) {
+      		         	
+
+             if (friend.gender === "male") {
+                maleFriends.push(friend)
+            } 
+        })
+        res.render("friends", {friends: maleFriends});
+           
+    })
+
 };

@@ -1,3 +1,10 @@
+body {
+	/*background-image: url("http://www.wallpaperg.com/resized_file/4--bucket/1308047451-sweet-love-couple-file.jpg")*/
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAhcGzLl6Xb4eTfqx9yweBwUc59WQN3DA3qnMVljESGtHECH34Dw")
+}
+
+
+
 .main {
 width: 60%;
 margin: 0 auto;
@@ -91,6 +98,7 @@ text-align: center;
 .thumbnail {
 	padding-top: 35px;
 	background-color: lightgray;
+	border: 1px solid black;
 }
 
 .thumbnail img {
@@ -100,4 +108,7 @@ text-align: center;
 
 #title {
 	text-align: center;
+	color: darkblue;
+	margin: 40px 0;
 }
+

@@ -4,17 +4,17 @@ $(document).ready(function() {
 
         var name = $("#usr").val();
         var photo = $("#photo").val();
-        var scores = ["2", "4", "5", "7", "8", "39"];
+        var scores = [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),];
+      
         var newSurvey = {
-        name: $("#usr").val(),
-        photo: $("#photo").val(),
-        //scores: 
-      // [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+        name: name,
+        photo: photo,
+        scores: scores
         };
 
 
         newSurvey.scores = scores;
-        // Question: What does this code do??
+        
         $.post("/api/friends", newSurvey)
             .done(function(data) {
                 console.log(data);
