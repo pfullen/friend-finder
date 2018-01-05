@@ -140,3 +140,21 @@ text-align: center;
 	height: 200px;
 
 }
+
+#friends-nav li  {
+	background-color: lightgray;
+	display: inline;
+	padding: 10px;
+	margin-top: 10px;
+	font-size: 15px;
+	padding-top: 10px;
+	color: blue;
+	text-decoration: none;
+}
+
+#friends-nav a {
+	color: darkblue;
+	text-decoration: none;
+}
+
+
